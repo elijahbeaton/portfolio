@@ -1,13 +1,71 @@
 :root{
     --background: #ffffff;
     --foreground: #000000;
+    --font: calc(1rem + 1vw);
 }
-    @font-face{font-family: "Open Arrow"; src: url(/assets/OpenArrow-Regular.woff2) format("woff2");font-weight: normal; font-style: normal; unicode-range: U+2190-21ff;}
-    @font-face{font-family: "TeX Gyre Heros"; src: url(/assets/texgyreheros-regular.woff) format("woff"); font-style: normal;}
-    ::selection {background-color: black;color: white}
-    body{font-family: "Open Arrow", "Helvetica Neue", "TeX Gyre Heros", sans-serif;font-size: calc(1rem + 2.5vw);margin: 5vh 5vw}
-    .arrow{font-size: 75%;}
-    a{color:black;text-decoration-thickness:0.15rem}
-    ul{list-style:none; padding:0}li{padding: 0.5vh 0}
-    @media (prefers-color-scheme: dark){::selection {background-color: white;color: black} body{color:white;background:black;}a{color:white}}
-    @media (max-width: 800px){body{margin: 5vh 5vw}}
+@media (prefers-color-scheme: dark){
+    :root{
+        --background: #000000;
+        --foreground: #ffffff;
+    }
+}
+
+@font-face{
+    font-family: "Open Arrow"; 
+    src: url(/assets/OpenArrow-Regular.woff2) format("woff2");
+    font-weight: normal; 
+    font-style: normal; 
+    unicode-range: U+2190-21ff;
+}
+@font-face{
+    font-family: "TeX Gyre Heros"; 
+    src: url(/assets/texgyreheros-regular.woff) format("woff"); 
+    font-style: normal;
+}
+
+body{
+    font-family: "Open Arrow", "Helvetica Neue", "TeX Gyre Heros", sans-serif;
+    font-size: var(--font);
+    margin: 5vh 5vw;
+    background: var(--background);
+    color: var(--foreground); 
+}
+
+h1{
+    font-size: inherit;
+    font-weight: normal;
+}
+
+h2{
+    font-style: italic;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.arrow{
+    font-size: 75%;
+}
+
+a{
+    text-decoration-thickness: 0.15rem
+}
+
+
+#skills{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    column-gap: 5vw;
+}
+ul{ 
+    list-style: none;
+    border-style: solid;
+    border-radius: 40px;
+    padding: 50px;
+}
+
+@media (max-width: 800px){
+    body{
+        margin: 5vh 5vw
+    }
+}
+
