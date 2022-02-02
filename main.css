@@ -1,0 +1,13 @@
+:root{
+    --background: #ffffff;
+    --foreground: #000000;
+}
+    @font-face{font-family: "Open Arrow"; src: url(/assets/OpenArrow-Regular.woff2) format("woff2");font-weight: normal; font-style: normal; unicode-range: U+2190-21ff;}
+    @font-face{font-family: "TeX Gyre Heros"; src: url(/assets/texgyreheros-regular.woff) format("woff"); font-style: normal;}
+    ::selection {background-color: black;color: white}
+    body{font-family: "Open Arrow", "Helvetica Neue", "TeX Gyre Heros", sans-serif;font-size: calc(1rem + 2.5vw);margin: 5vh 5vw}
+    .arrow{font-size: 75%;}
+    a{color:black;text-decoration-thickness:0.15rem}
+    ul{list-style:none; padding:0}li{padding: 0.5vh 0}
+    @media (prefers-color-scheme: dark){::selection {background-color: white;color: black} body{color:white;background:black;}a{color:white}}
+    @media (max-width: 800px){body{margin: 5vh 5vw}}
