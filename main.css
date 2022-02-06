@@ -1,6 +1,7 @@
 :root{
     --background: white;
     --foreground: black;
+    --50: rgba(0, 0, 0, 0.5);
     --color: gold;
     --font: calc(1rem + 1.5vw);
 }
@@ -8,6 +9,7 @@
     :root{
         --background: black;
         --foreground: white;
+        --50: rgba(255, 255, 255, 0.5);
         --color: gold;
     }
 }
@@ -50,7 +52,7 @@ h1{
 h2{
     font-size: inherit;
     font-weight: inherit;
-    opacity: 50%;
+    color: var(--50);
     padding-bottom: 5vh;
 }
 p{
