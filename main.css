@@ -1,12 +1,14 @@
 :root{
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: white;
+    --foreground: black;
+    --color: gold;
     --font: calc(1rem + 1.5vw);
 }
 @media (prefers-color-scheme: dark){
     :root{
-        --background: #000000;
-        --foreground: #ffffff;
+        --background: black;
+        --foreground: white;
+        --color: gold;
     }
 }
 
@@ -20,6 +22,16 @@
     font-family: "IBM";
         src: url(/assets/IBMPlexSans-Medium.woff2) format("woff2");
     font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0; 
+}
+
+::selection {
+    background-color: var(--color);
+    color: black;
 }
 
 body{
@@ -57,16 +69,16 @@ h1{
 }
 .grid{
     display: grid;
-    padding: 0 2vw;
+    padding: 5vh 2vw;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
     column-gap: 2vw;
-    align-items: center;
+    align-items: top;
 }
 .image{
     object-fit: cover;
     width: 46vw;
-    height: 80vh;
-    border-radius: 2rem
+    height:46vw;
+    border-radius: 2rem;
 }
 
 
@@ -78,6 +90,6 @@ h1{
     .image{
         object-fit: cover;
         width: 94vw;
-        height: 50vh;
+        height: 94vw;
     }
 }
