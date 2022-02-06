@@ -23,8 +23,8 @@
 }
 
 body{
-    font-family: "Work Sans", serif;
-    font-weight: 500;
+    font-family: "IBM", serif;
+    font-weight: normal;
     font-size: var(--font);
     margin: 5vh 5vw;
     background: var(--background);
