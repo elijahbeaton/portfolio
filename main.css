@@ -66,8 +66,7 @@ h1{
     object-fit: cover;
     width: 46vw;
     height: 80vh;
-    border-radius: 2rem;
-    
+    border-radius: 2rem
 }
 
 
@@ -75,5 +74,10 @@ h1{
 @media (max-width: 500px){
     .grid {
         display: revert;
+    }
+    .image{
+        object-fit: cover;
+        width: 94vw;
+        height: 80vh;
     }
 }
