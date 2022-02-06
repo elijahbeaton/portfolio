@@ -61,14 +61,18 @@ p{
     display: none;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    padding-left: 3vw; 
+    scroll-snap-align: start;
+}
 #title{
     display: flex;
     align-items: flex-end;
     line-height: 160%;
-    width: min-content;
-    margin: auto;
-    padding: 30vh 0 40vh 5vw;
-    scroll-snap-align: start;
 }
 .role, .designer{
     text-transform: capitalize;
@@ -90,8 +94,8 @@ p{
 }
 .image{
     object-fit: cover;
-    width: 50vw;
-    height: 50vw;
+    width: 47vw;
+    height: 47vw;
     border-radius: 2rem;
 }
 
