@@ -1,14 +1,14 @@
 :root{
     --background: white;
     --foreground: black;
-    --gray: rgba(0, 0, 0, 0.5);
+    --gray: rgba(0, 0, 0, 0.4);
     --font: calc(1rem + 1.5vw);
 }
 @media (prefers-color-scheme: dark){
     :root{
         --background: black;
         --foreground: white;
-        --gray: rgba(255, 255, 255, 0.5);
+        --gray: rgba(255, 255, 255, 0.4);
     }
 }
 
