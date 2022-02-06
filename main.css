@@ -65,8 +65,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 95vh;
-    padding-left: 3vw; 
+    height: 85vh;
+    padding-left: 3vw;
+    padding-bottom: 8vh; 
     scroll-snap-align: start;
 }
 #title{
