@@ -12,10 +12,14 @@
 
 
 @font-face{
-    font-family: "Work Sans"; 
-    src: url(https://github.com/weiweihuanghuang/Work-Sans/blob/b35c81086186162164947bd39574683073d9b268/fonts/variable/WorkSans%5Bwght%5D.ttf?raw=true) format("truetype"); 
+    font-family: "IBM";
+        src: url(/assets/IBMPlexSans-MediumItalic.woff2) format("woff2");
+    font-style: italic;
+}
+@font-face{
+    font-family: "IBM";
+        src: url(/assets/IBMPlexSans-Medium.woff2) format("woff2");
     font-style: normal;
-    font-feature-settings: "ss02";
 }
 
 body{
@@ -42,12 +46,6 @@ a{
     text-decoration-thickness: 0.15rem
 }
 
-
-#skills{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
-    column-gap: 5vw;
-}
 ul{ 
     list-style: none;
     border-left-style: solid;
