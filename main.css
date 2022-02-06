@@ -137,6 +137,23 @@ h2, .stack{
 	        animation: bounce-in-fwd 1s cubic-bezier(0, 0, 0, 1) 3s forwards;
 }
 
+/* No Motion */
+@media (prefers-reduced-motion) {
+  /* this should also turn off autoplaying gifs?? */
+    *{
+        opacity: 1;
+        -webkit-animation: none;
+        animation: none;
+    }
+/* This serves an alt in the HTML */
+/*
+<picture>
+    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+    <img srcset="animated.gif" alt="brick wall">
+</picture> 
+    */
+    
+}
 
 /* Keyframes */
 /* fade in */
