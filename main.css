@@ -75,12 +75,10 @@ header{
     align-items: flex-end;
     line-height: 160%;
 }
-.role, .designer{
+.stack{
     text-transform: capitalize;
     display: flex;
-}
-.role{
-    color: var(--gray); 
+    color: var(--gray);
 }
 
 .grid{
