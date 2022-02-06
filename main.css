@@ -40,12 +40,23 @@ body{
     font-size: var(--font);
     background: var(--background);
     color: var(--foreground); 
+    scroll-snap-type: y mandatory;
 }
 
 h1{
     font-size: inherit;
     font-weight: inherit;
 }
+h2{
+    font-size: inherit;
+    font-weight: inherit;
+    opacity: 50%;
+    padding-bottom: 5vh;
+}
+p{
+    font-size: 75%;
+}
+
 .hidden{
     display: none;
 }
@@ -56,7 +67,8 @@ h1{
     line-height: 160%;
     width: min-content;
     margin: auto;
-    padding: 25vh 0 25vh 5vw; 
+    padding: 30vh 0 40vh 5vw;
+    scroll-snap-align: start;
 }
 .role, .designer{
     text-transform: capitalize;
@@ -67,17 +79,19 @@ h1{
 .role{
     opacity: 50%;
 }
+
 .grid{
     display: grid;
     padding: 5vh 2vw;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
     column-gap: 2vw;
     align-items: top;
+    scroll-snap-align: start;
 }
 .image{
     object-fit: cover;
-    width: 46vw;
-    height:46vw;
+    width: 50vw;
+    height: 50vw;
     border-radius: 2rem;
 }
 
