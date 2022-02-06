@@ -1,16 +1,14 @@
 :root{
     --background: white;
     --foreground: black;
-    --50: rgba(0, 0, 0, 0.5);
-    --color: gold;
+    --gray: rgba(0, 0, 0, 0.5);
     --font: calc(1rem + 1.5vw);
 }
 @media (prefers-color-scheme: dark){
     :root{
         --background: black;
         --foreground: white;
-        --50: rgba(255, 255, 255, 0.5);
-        --color: gold;
+        --gray: rgba(255, 255, 255, 0.5);
     }
 }
 
@@ -32,7 +30,7 @@
 }
 
 ::selection {
-    background-color: var(--color);
+    background-color: gold;
     color: black;
 }
 
@@ -52,7 +50,7 @@ h1{
 h2{
     font-size: inherit;
     font-weight: inherit;
-    color: var(--50);
+    color: var(--gray);
     padding-bottom: 5vh;
 }
 p{
@@ -79,12 +77,10 @@ header{
 }
 .role, .designer{
     text-transform: capitalize;
-    padding-left: calc(0.25rem + 0.5vw);
     display: flex;
-    flex-direction: column;
 }
 .role{
-    opacity: 50%;
+    color: var(--gray); 
 }
 
 .grid{
