@@ -78,6 +78,6 @@ h1{
     .image{
         object-fit: cover;
         width: 94vw;
-        height: 80vh;
+        height: 50vh;
     }
 }
