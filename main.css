@@ -1,7 +1,7 @@
 :root{
     --background: #ffffff;
     --foreground: #000000;
-    --font: calc(1rem + 1vw);
+    --font: calc(1rem + 1.5vw);
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -26,7 +26,6 @@ body{
     font-family: "IBM", serif;
     font-weight: normal;
     font-size: var(--font);
-    margin: 5vh 5vw;
     background: var(--background);
     color: var(--foreground); 
 }
@@ -35,22 +34,27 @@ h1{
     font-size: inherit;
     font-weight: inherit;
 }
-
-h2{
-    font-size: 75%;
-    font-weight: inherit;
-    opacity: 60%;
+.hidden{
+    display: none;
+}
+#title{
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    line-height: 160%;
+}
+.role, .designer{
+    text-transform: capitalize;
+    padding: 0 5px;
+}
+.role::after{
+    content: "\A";
+    white-space: pre;
 }
 
-a{
-    text-decoration-thickness: 0.15rem
-}
-
-ul{ 
-    list-style: none;
-    border-left-style: solid;
-    padding: 0 50px;
-}
 
 @media (max-width: 800px){
     body{
