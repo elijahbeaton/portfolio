@@ -55,10 +55,11 @@ header{
 #title{
     display: flex;
     align-items: flex-end;
-    line-height: 160%;
+
 }
 .stack{
     display: flex;
+    padding: 0.5rem 0;
 }
 .grid{
     display: grid;
