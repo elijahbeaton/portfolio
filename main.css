@@ -18,7 +18,7 @@
 body {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: normal;
-    font-size: calc(1rem + 1.5vw);
+    font-size: calc(1rem + 1vw);
     scroll-snap-type: y mandatory;
 }
 
@@ -39,15 +39,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 75vh;
     padding-left: 3vw;
-    padding-bottom: 8vh;
-    scroll-snap-align: start;
+    padding-bottom: 7vh;
+    border-radius: 2rem;
+    background: none;
+    margin: 5vh 2vw;
+    scroll-snap-align: center;
 }
 #title {
     display: flex;
     align-items: flex-end;
-
+    font-size: 125%;
 }
 .stack {
     display: flex;
