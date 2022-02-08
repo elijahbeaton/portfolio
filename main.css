@@ -125,22 +125,29 @@ body {
     .grid {
         display: revert;
     }
+    section div{
+        padding: 5vh 0;
+    }
 
     .image {
-        width: 94vw;
-        height: 94vw;
+        width: 96vw;
+        height: auto;
     }
-    header{
+
+    header, .stack {
         padding: 0;
+        line-height: 150%;
     }
 
     #title {
         display: revert;
     }
-    .designer{
+
+    .designer {
         animation-delay: 2.75s;
     }
-    .hidden{
+
+    .hidden {
         color: revert;
         position: revert;
     }
@@ -192,11 +199,11 @@ body {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }/* This serves an alt in the HTML *//*
-                <picture>
-                    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                    <img srcset="animated.gif" alt="brick wall">
-                </picture> 
-                    */
+                    <picture>
+                        <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                        <img srcset="animated.gif" alt="brick wall">
+                    </picture> 
+                        */
 }
 
 @media (hover: none) {
