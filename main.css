@@ -137,7 +137,9 @@ body {
     #title {
         display: revert;
     }
-
+    .designer{
+        animation-delay: 2.75s;
+    }
     .hidden{
         color: revert;
         position: revert;
@@ -159,6 +161,7 @@ body {
 .designer {
     opacity: 0;
     animation-duration: 3s;
+    animation-delay: 2.25s;
 }
 
 .stack, .hidden {
