@@ -110,6 +110,15 @@ body {
     }
 }
 
+/* HIDDEN */
+.hidden, .hidden::selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-color: transparent;
+}
+
 /* MOBILE */
 @media (max-width: 500px) {
     .grid {
