@@ -26,11 +26,13 @@ h1 {
     font-size: inherit;
     font-weight: inherit;
 }
+
 h2 {
     font-size: inherit;
     font-weight: inherit;
     padding-bottom: 5vh;
 }
+
 p {
     font-size: 75%;
 }
@@ -47,15 +49,18 @@ header {
     margin: 5vh 2vw;
     scroll-snap-align: center;
 }
+
 #title {
     display: flex;
     align-items: flex-end;
     font-size: 125%;
 }
+
 .stack {
     display: flex;
     padding-bottom: 0.5rem;
 }
+
 .grid {
     display: grid;
     padding: 5vh 2vw;
@@ -64,13 +69,18 @@ header {
     align-items: top;
     scroll-snap-align: start;
 }
+
 .image {
     object-fit: cover;
     width: 47vw;
     height: 47vw;
     border-radius: 2rem;
-    box-shadow:0 4px 8px rgba(0, 0, 0, .24), 
-               0 24px 40px rgba(0, 0, 0, .24);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
 
 /* COLORS */
@@ -93,10 +103,9 @@ body {
     .stack, h2 {
         color: rgba(255, 255, 255, 0.4);
     }
-    .image{
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7),
-                    0 24px 40px rgba(0, 0, 0, 0.7), 
-                    0px 10px 150px rgba(255, 255, 255, 0.1);
+
+    .image {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 24px 40px rgba(0, 0, 0, 0.7), 0px 15px 100px rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -105,12 +114,13 @@ body {
     .grid {
         display: revert;
     }
+
     .image {
-        object-fit: cover;
         width: 94vw;
         height: 94vw;
     }
 }
+
 
 /* ANIMATIONS */
 
@@ -119,13 +129,16 @@ body {
     opacity: 0;
     animation: FadeIn forwards;
 }
+
 .name {
     animation-duration: 1s;
 }
+
 .designer {
     opacity: 0;
     animation-duration: 3s;
 }
+
 .stack {
     animation-duration: 2s;
 }
@@ -143,14 +156,24 @@ body {
         opacity: 1;
         animation: none;
     }
-    /* This serves an alt in the HTML */
-    /*
-<picture>
-    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-    <img srcset="animated.gif" alt="brick wall">
-</picture> 
-    */
-
+    .image, .image:hover {
+        transition: none;
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
+    }
+    /* This serves an alt in the HTML *//*
+    <picture>
+        <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+        <img srcset="animated.gif" alt="brick wall">
+    </picture> 
+        */
+}
+@media (hover: none){
+    .image, .image:hover {
+        transition: none;
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
+    }
 }
 
 /* Keyframes */
@@ -165,47 +188,58 @@ body {
     }
 }
 /* bounce-in-fwd by Animista, Licensed under FreeBSD License; see http://animista.net/license for more info */
+
 @keyframes bounce-in-fwd {
     0% {
         transform: scale(0);
         animation-timing-function: ease-in;
         opacity: 0;
     }
+
     25% {
         opacity: 0.25;
     }
+
     38% {
         transform: scale(1);
         animation-timing-function: ease-out;
     }
+
     50% {
         opacity: 0.5;
     }
+
     55% {
         -webkit-transform: scale(0.7);
         transform: scale(0.7);
         animation-timing-function: ease-in;
     }
+
     72% {
         transform: scale(1);
         animation-timing-function: ease-out;
     }
+
     75% {
         opacity: 0.75;
     }
+
     81% {
         transform: scale(0.84);
         animation-timing-function: ease-in;
     }
+
     89% {
         transform: scale(1);
         animation-timing-function: ease-out;
     }
+
     95% {
         transform: scale(0.9);
         animation-timing-function: ease-in;
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         animation-timing-function: ease-out;
