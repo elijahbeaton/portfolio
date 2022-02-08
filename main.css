@@ -69,6 +69,8 @@ header {
     width: 47vw;
     height: 47vw;
     border-radius: 2rem;
+    box-shadow:0 4px 8px rgba(0, 0, 0, .24), 
+               0 24px 40px rgba(0, 0, 0, .24);
 }
 
 /* COLORS */
@@ -76,19 +78,25 @@ body {
     background: whitesmoke;
     color: black;
 }
-.stack,
-h2 {
+
+.stack, h2 {
     color: rgba(0, 0, 0, 0.4);
 }
+
 @media (prefers-color-scheme: dark) {
     body {
         background: black;
         color: white;
         scroll-snap-type: y mandatory;
     }
-    .stack,
-    h2 {
+
+    .stack, h2 {
         color: rgba(255, 255, 255, 0.4);
+    }
+    .image{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7),
+                    0 24px 40px rgba(0, 0, 0, 0.7), 
+                    0px 10px 150px rgba(255, 255, 255, 0.1);
     }
 }
 
