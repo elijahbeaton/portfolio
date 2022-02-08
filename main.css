@@ -130,19 +130,24 @@ body {
         width: 94vw;
         height: 94vw;
     }
-    #title{
+    header{
+        padding: 0;
+    }
+
+    #title {
         display: revert;
     }
-    .stack{
-        padding-bottom: 0;
-        line-height: 150%;
+
+    .hidden{
+        color: revert;
+        position: revert;
     }
 }
 
 /* ANIMATIONS */
 
 /* Content */
-#title, .designer, .name, .stack, #and{
+#title, .designer, .name, .stack, .hidden {
     opacity: 0;
     animation: FadeIn forwards;
 }
@@ -156,7 +161,7 @@ body {
     animation-duration: 3s;
 }
 
-.stack, #and {
+.stack, .hidden {
     animation-duration: 2s;
 }
 
@@ -184,11 +189,11 @@ body {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }/* This serves an alt in the HTML *//*
-            <picture>
-                <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                <img srcset="animated.gif" alt="brick wall">
-            </picture> 
-                */
+                <picture>
+                    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                    <img srcset="animated.gif" alt="brick wall">
+                </picture> 
+                    */
 }
 
 @media (hover: none) {
