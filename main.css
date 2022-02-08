@@ -133,6 +133,10 @@ body {
     #title{
         display: revert;
     }
+    .stack{
+        padding-bottom: 0;
+        line-height: 150%;
+    }
 }
 
 /* ANIMATIONS */
