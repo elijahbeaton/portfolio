@@ -47,6 +47,7 @@ header {
     border-radius: 2rem;
     background: none;
     margin: 5vh 2vw;
+    white-space: nowrap;
     scroll-snap-align: center;
 }
 
