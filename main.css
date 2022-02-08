@@ -78,6 +78,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
 }
+
 .image:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
@@ -121,7 +122,6 @@ body {
     }
 }
 
-
 /* ANIMATIONS */
 
 /* Content */
@@ -148,6 +148,10 @@ body {
     opacity: 0;
     animation: bounce-in-fwd 1s cubic-bezier(0, 0, 0, 1) 3s forwards;
 }
+.grid{
+    opacity: 0;
+    animation: FadeIn 3s forwards 4s;
+}
 
 /* No Motion */
 @media (prefers-reduced-motion) {
@@ -156,19 +160,21 @@ body {
         opacity: 1;
         animation: none;
     }
+
     .image, .image:hover {
         transition: none;
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }
     /* This serves an alt in the HTML *//*
-    <picture>
-        <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-        <img srcset="animated.gif" alt="brick wall">
-    </picture> 
-        */
+        <picture>
+            <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+            <img srcset="animated.gif" alt="brick wall">
+        </picture> 
+            */
 }
-@media (hover: none){
+
+@media (hover: none) {
     .image, .image:hover {
         transition: none;
         transform: none;
