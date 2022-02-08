@@ -130,12 +130,15 @@ body {
         width: 94vw;
         height: 94vw;
     }
+    #title{
+        display: revert;
+    }
 }
 
 /* ANIMATIONS */
 
 /* Content */
-#title, .designer, .name, .stack {
+#title, .designer, .name, .stack, #and{
     opacity: 0;
     animation: FadeIn forwards;
 }
@@ -149,16 +152,17 @@ body {
     animation-duration: 3s;
 }
 
-.stack {
+.stack, #and {
     animation-duration: 2s;
 }
 
 .bounce-in-fwd {
     display: inline-block;
     opacity: 0;
-    animation: bounce-in-fwd 1s cubic-bezier(0, 0, 0, 1) 3s forwards;
+    animation: bounce-in-fwd 1s cubic-bezier(0, 0, 0, 1) 3.25s forwards;
 }
-.grid{
+
+.grid {
     opacity: 0;
     animation: FadeIn 3s forwards 4s;
 }
@@ -175,13 +179,12 @@ body {
         transition: none;
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
-    }
-    /* This serves an alt in the HTML *//*
-        <picture>
-            <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-            <img srcset="animated.gif" alt="brick wall">
-        </picture> 
-            */
+    }/* This serves an alt in the HTML *//*
+            <picture>
+                <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                <img srcset="animated.gif" alt="brick wall">
+            </picture> 
+                */
 }
 
 @media (hover: none) {
