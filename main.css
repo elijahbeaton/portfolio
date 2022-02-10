@@ -76,17 +76,22 @@ section, footer {
 
 .grid {
     display: grid;
-    padding: 5vh 5vw;
+    padding: 7vh 5vw;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    column-gap: 5vw;
+    column-gap: 10vw;
     align-items: top;
     scroll-snap-align: start;
+}
+
+.grid div{
+    padding-top: 5vh; 
+    text-align: justify 
 }
 
 .image {
     object-fit: cover;
     width: 40vw;
-    height: 40vw;
+    height: auto;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
@@ -96,7 +101,6 @@ section, footer {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
-
 
 /* COLORS */
 body {
@@ -242,7 +246,8 @@ section {
         color: revert;
         position: revert;
     }
-    .text{
+
+    .text {
         width: 90%;
     }
 }
