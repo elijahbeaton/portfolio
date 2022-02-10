@@ -110,8 +110,6 @@ body {
 
 a {
     color: black;
-    text-decoration-thickness: 100%;
-    text-underline-offset: 0.25rem;
     transition-duration: .5s;
     text-decoration-color: rgba(0, 0, 0, 0.4);
 }
