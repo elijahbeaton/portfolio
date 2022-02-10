@@ -38,6 +38,7 @@ p {
     padding-bottom: 1rem;
 }
 
+
 header {
     display: flex;
     align-items: center;
@@ -63,12 +64,14 @@ header {
     padding-bottom: 0.5rem;
 }
 
-section{
-    scroll-snap-align: center;
+section, footer{
+    scroll-snap-align: start;
 }
-
 .text{
-    margin: 10vh 15vw;
+    padding: 10vh 15vw;
+    border-radius: 2rem;
+    text-align: justify;
+
 }
 
 .grid {
@@ -94,10 +97,26 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
 
+ul, li{
+    list-style:none; 
+    padding: 10px 0;
+}
+
 /* COLORS */
 body {
     background: whitesmoke;
     color: black;
+}
+
+a {
+    color: black;
+    text-decoration-thickness: 100%;
+    text-underline-offset:0.5rem; 
+    transition-duration: .5s;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+}
+a:hover{
+    text-decoration-color: black;
 }
 
 .stack, h2 {
@@ -109,6 +128,13 @@ body {
         background: black;
         color: white;
         scroll-snap-type: y mandatory;
+    }
+    a{
+        color: white;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+    }
+    a:hover{
+        text-decoration-color: white;
     }
 
     .stack, h2 {
