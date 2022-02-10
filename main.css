@@ -16,9 +16,9 @@
 }
 
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "IBM Plex Sans", "Arial", sans-serif;
     font-weight: normal;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.75vw);
     scroll-snap-type: y mandatory;
 }
 
@@ -34,7 +34,7 @@ h2 {
 }
 
 p {
-    font-size: 75%;
+    font-size: 80%;
     padding-bottom: 1rem;
 }
 
@@ -55,7 +55,7 @@ header {
 #title {
     display: flex;
     align-items: flex-end;
-    font-size: 125%;
+    font-size: 120%;
 }
 
 .stack {
@@ -68,24 +68,25 @@ section, footer {
 }
 
 .text {
-    padding: 15vw;
+    margin: 10vh auto;
+    width: 60%;
     border-radius: 2rem;
     text-align: justify;
 }
 
 .grid {
     display: grid;
-    padding: 5vh 2vw;
+    padding: 5vh 5vw;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    column-gap: 2vw;
+    column-gap: 5vw;
     align-items: top;
     scroll-snap-align: start;
 }
 
 .image {
     object-fit: cover;
-    width: 47vw;
-    height: 47vw;
+    width: 40vw;
+    height: 40vw;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
@@ -198,12 +199,7 @@ section {
         transition: none;
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
-    }/* This serves an alt in the HTML *//*
-                                <picture>
-                                    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                                    <img srcset="animated.gif" alt="brick wall">
-                                </picture> 
-                                    */
+    }
 }
 
 @media (hover: none) {
@@ -225,7 +221,7 @@ section {
     }
 
     .image {
-        width: 96vw;
+        width: 90vw;
         height: auto;
     }
 
@@ -245,6 +241,9 @@ section {
     .hidden {
         color: revert;
         position: revert;
+    }
+    .text{
+        width: 90%;
     }
 }
 
