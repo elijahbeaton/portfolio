@@ -38,7 +38,6 @@ p {
     padding-bottom: 1rem;
 }
 
-
 header {
     display: flex;
     align-items: center;
@@ -64,14 +63,14 @@ header {
     padding-bottom: 0.5rem;
 }
 
-section, footer{
+section, footer {
     scroll-snap-align: start;
 }
-.text{
+
+.text {
     padding: 10vh 15vw;
     border-radius: 2rem;
     text-align: justify;
-
 }
 
 .grid {
@@ -97,8 +96,8 @@ section, footer{
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
 
-ul, li{
-    list-style:none; 
+ul, li {
+    list-style: none;
     padding: 10px 0;
 }
 
@@ -111,11 +110,12 @@ body {
 a {
     color: black;
     text-decoration-thickness: 100%;
-    text-underline-offset:0.5rem; 
+    text-underline-offset: 0.5rem;
     transition-duration: .5s;
     text-decoration-color: rgba(0, 0, 0, 0.5);
 }
-a:hover{
+
+a:hover {
     text-decoration-color: black;
 }
 
@@ -129,11 +129,13 @@ a:hover{
         color: white;
         scroll-snap-type: y mandatory;
     }
-    a{
+
+    a {
         color: white;
         text-decoration-color: rgba(255, 255, 255, 0.5);
     }
-    a:hover{
+
+    a:hover {
         text-decoration-color: white;
     }
 
@@ -153,40 +155,6 @@ a:hover{
     left: 0;
     color: transparent;
     background-color: transparent;
-}
-
-/* MOBILE */
-@media (max-width: 500px) {
-    .grid {
-        display: revert;
-    }
-
-    section div {
-        padding: 5vh 0;
-    }
-
-    .image {
-        width: 96vw;
-        height: auto;
-    }
-
-    header, .stack {
-        padding: 0;
-        line-height: 150%;
-    }
-
-    #title {
-        display: revert;
-    }
-
-    .designer {
-        animation-delay: 2.75s;
-    }
-
-    .hidden {
-        color: revert;
-        position: revert;
-    }
 }
 
 /* ANIMATIONS */
@@ -235,11 +203,11 @@ section {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }/* This serves an alt in the HTML *//*
-                        <picture>
-                            <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                            <img srcset="animated.gif" alt="brick wall">
-                        </picture> 
-                            */
+                            <picture>
+                                <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                                <img srcset="animated.gif" alt="brick wall">
+                            </picture> 
+                                */
 }
 
 @media (hover: none) {
@@ -250,7 +218,41 @@ section {
     }
 }
 
-/* Keyframes */
+/* MOBILE */
+@media (max-width: 500px) {
+    .grid {
+        display: revert;
+    }
+
+    section div {
+        padding: 5vh 0;
+    }
+
+    .image {
+        width: 96vw;
+        height: auto;
+    }
+
+    header, .stack {
+        padding: 0;
+        line-height: 150%;
+    }
+
+    #title {
+        display: revert;
+    }
+
+    .designer {
+        animation-delay: 2.85s;
+    }
+
+    .hidden {
+        color: revert;
+        position: revert;
+    }
+}
+
+/* KEYFRAMES */
 /* fade in */
 @keyframes FadeIn {
     0% {
@@ -262,7 +264,6 @@ section {
     }
 }
 /* bounce-in-fwd */
-
 @keyframes bounce-in-fwd {
     0% {
         transform: scale(0);
