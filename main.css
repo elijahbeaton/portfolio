@@ -68,7 +68,7 @@ section, footer {
 }
 
 .text {
-    padding: 10vh 15vw;
+    padding: 15vw;
     border-radius: 2rem;
     text-align: justify;
 }
@@ -96,10 +96,6 @@ section, footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
 
-ul, li {
-    list-style: none;
-    padding: 10px 0;
-}
 
 /* COLORS */
 body {
@@ -110,9 +106,9 @@ body {
 a {
     color: black;
     text-decoration-thickness: 100%;
-    text-underline-offset: 0.5rem;
+    text-underline-offset: 0.25rem;
     transition-duration: .5s;
-    text-decoration-color: rgba(0, 0, 0, 0.5);
+    text-decoration-color: rgba(0, 0, 0, 0.4);
 }
 
 a:hover {
@@ -132,7 +128,7 @@ a:hover {
 
     a {
         color: white;
-        text-decoration-color: rgba(255, 255, 255, 0.5);
+        text-decoration-color: rgba(255, 255, 255, 0.4);
     }
 
     a:hover {
@@ -203,11 +199,11 @@ section {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }/* This serves an alt in the HTML *//*
-                            <picture>
-                                <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                                <img srcset="animated.gif" alt="brick wall">
-                            </picture> 
-                                */
+                                <picture>
+                                    <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                                    <img srcset="animated.gif" alt="brick wall">
+                                </picture> 
+                                    */
 }
 
 @media (hover: none) {
@@ -264,6 +260,7 @@ section {
     }
 }
 /* bounce-in-fwd */
+
 @keyframes bounce-in-fwd {
     0% {
         transform: scale(0);
