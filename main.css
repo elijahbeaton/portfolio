@@ -30,11 +30,12 @@ h1 {
 h2 {
     font-size: inherit;
     font-weight: inherit;
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
 }
 
 p {
     font-size: 75%;
+    padding-bottom: 1rem;
 }
 
 header {
@@ -60,6 +61,14 @@ header {
 .stack {
     display: flex;
     padding-bottom: 0.5rem;
+}
+
+section{
+    scroll-snap-align: center;
+}
+
+.text{
+    margin: 10vh 15vw;
 }
 
 .grid {
@@ -125,7 +134,8 @@ body {
     .grid {
         display: revert;
     }
-    section div{
+
+    section div {
         padding: 5vh 0;
     }
 
@@ -181,7 +191,7 @@ body {
     animation: bounce-in-fwd 1s cubic-bezier(0, 0, 0, 1) 3.25s forwards;
 }
 
-.grid {
+section {
     opacity: 0;
     animation: FadeIn 3s forwards 4s;
 }
@@ -199,11 +209,11 @@ body {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     }/* This serves an alt in the HTML *//*
-                    <picture>
-                        <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
-                        <img srcset="animated.gif" alt="brick wall">
-                    </picture> 
-                        */
+                        <picture>
+                            <source srcset="no-motion.jpg" media="(prefers-reduced-motion: reduce)"></source> 
+                            <img srcset="animated.gif" alt="brick wall">
+                        </picture> 
+                            */
 }
 
 @media (hover: none) {
