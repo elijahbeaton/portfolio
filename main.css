@@ -19,17 +19,20 @@ body {
     font-family: "IBM Plex Sans", "Arial", sans-serif;
     font-weight: normal;
     font-size: calc(1rem + 0.75vw);
+    text-align: justify;
     scroll-snap-type: y mandatory;
+    margin: 0 5vw;
+    display: grid;
+    grid-template-rows: 50vw;
+    row-gap: 10vh;
 }
 
-h1 {
+h1, h2 {
     font-size: inherit;
     font-weight: inherit;
 }
 
 h2 {
-    font-size: inherit;
-    font-weight: inherit;
     padding-bottom: 3vh;
 }
 
@@ -42,13 +45,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
     padding-left: 3vw;
-    padding-bottom: 7vh;
-    border-radius: 2rem;
-    background: none;
-    margin: 5vh 2vw;
-    white-space: nowrap;
+    scroll-snap-align: center;
+}
+section{
     scroll-snap-align: center;
 }
 
@@ -63,41 +63,31 @@ header {
     padding-bottom: 0.5rem;
 }
 
-section, footer {
-    scroll-snap-align: start;
-}
-
-.text {
-    margin: 10vh auto;
-    width: 60%;
-    border-radius: 2rem;
-    text-align: justify;
-}
-
-.grid {
+.grid, .swap{
     display: grid;
-    padding: 7vh 5vw;
-    grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    column-gap: 10vw;
-    align-items: top;
-    scroll-snap-align: start;
+    grid-template-columns: repeat(2, 1fr);
+    place-self: stretch;
+    column-gap: 5vw;
 }
-
 .grid div{
-    padding-top: 5vh; 
-    text-align: justify 
+    padding-top: 3vh;
 }
-
-.image {
+.swap a{
+    grid-column-start: 2;
+}
+.swap div{
+    grid-row-start: 1;
+}
+img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    width: 40vw;
-    height: auto;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
     transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-.image:hover {
+img:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
@@ -126,23 +116,18 @@ a:hover {
     body {
         background: black;
         color: white;
-        scroll-snap-type: y mandatory;
     }
-
     a {
         color: white;
         text-decoration-color: rgba(255, 255, 255, 0.4);
     }
-
     a:hover {
         text-decoration-color: white;
     }
-
     .stack, h2 {
         color: rgba(255, 255, 255, 0.4);
     }
-
-    .image {
+    img{
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 24px 40px rgba(0, 0, 0, 0.7), 0px 15px 100px rgba(255, 255, 255, 0.1);
     }
 }
@@ -157,7 +142,6 @@ a:hover {
 }
 
 /* ANIMATIONS */
-
 /* Content */
 #title, .designer, .name, .stack, .hidden {
     opacity: 0;
@@ -191,13 +175,12 @@ section {
 
 /* No Motion */
 @media (prefers-reduced-motion) {
-    /* this should also turn off autoplaying gifs?? */
     * {
         opacity: 1;
         animation: none;
     }
 
-    .image, .image:hover {
+    img, img:hover {
         transition: none;
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
@@ -205,7 +188,7 @@ section {
 }
 
 @media (hover: none) {
-    .image, .image:hover {
+    img, img:hover {
         transition: none;
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .25), 0 24px 40px rgba(0, 0, 0, .25);
@@ -214,19 +197,11 @@ section {
 
 /* MOBILE */
 @media (max-width: 500px) {
-    .grid {
-        display: revert;
+    .grid, .swap a, .swap div{
+        grid-template-columns: 1fr;
+        grid-column-start: revert;
+        grid-row-start: revert;
     }
-
-    section div {
-        padding: 5vh 0;
-    }
-
-    .image {
-        width: 90vw;
-        height: auto;
-    }
-
     header, .stack {
         padding: 0;
         line-height: 150%;
@@ -243,10 +218,6 @@ section {
     .hidden {
         color: revert;
         position: revert;
-    }
-
-    .text {
-        width: 90%;
     }
 }
 
