@@ -232,6 +232,9 @@ section {
         color: revert;
         position: revert;
     }
+    .text{
+        margin: 0;
+    }
 }
 
 /* KEYFRAMES */
