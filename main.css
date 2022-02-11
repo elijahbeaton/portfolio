@@ -48,7 +48,8 @@ header {
     padding-left: 3vw;
     scroll-snap-align: center;
 }
-section{
+
+section {
     scroll-snap-align: center;
 }
 
@@ -63,22 +64,26 @@ section{
     padding-bottom: 0.5rem;
 }
 
-.grid, .swap{
+.grid, .swap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-self: stretch;
     column-gap: 5vw;
 }
-.grid div{
+
+.grid div {
     padding-top: 3vh;
 }
-.swap a{
+
+.swap a {
     grid-column-start: 2;
 }
-.swap div{
+
+.swap div {
     grid-row-start: 1;
 }
-img{
+
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -90,6 +95,9 @@ img{
 img:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
+}
+.text{
+    margin: 0 15vw;
 }
 
 /* COLORS */
@@ -117,17 +125,21 @@ a:hover {
         background: black;
         color: white;
     }
+
     a {
         color: white;
         text-decoration-color: rgba(255, 255, 255, 0.4);
     }
+
     a:hover {
         text-decoration-color: white;
     }
+
     .stack, h2 {
         color: rgba(255, 255, 255, 0.4);
     }
-    img{
+
+    img {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 24px 40px rgba(0, 0, 0, 0.7), 0px 15px 100px rgba(255, 255, 255, 0.1);
     }
 }
@@ -197,11 +209,12 @@ section {
 
 /* MOBILE */
 @media (max-width: 500px) {
-    .grid, .swap a, .swap div{
+    .grid, .swap a, .swap div {
         grid-template-columns: 1fr;
         grid-column-start: revert;
         grid-row-start: revert;
     }
+
     header, .stack {
         padding: 0;
         line-height: 150%;
