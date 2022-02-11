@@ -18,7 +18,7 @@
 body {
     font-family: "IBM Plex Sans", "Arial", sans-serif;
     font-weight: normal;
-    font-size: calc(1rem + 0.75vw);
+    font-size: 1.75rem;
     text-align: justify;
     scroll-snap-type: y mandatory;
     margin: 0 5vw;
@@ -39,6 +39,9 @@ h2 {
 p {
     font-size: 80%;
     padding-bottom: 1rem;
+}
+hr{
+    margin: 1rem 0;
 }
 
 header {
