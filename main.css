@@ -18,7 +18,7 @@
 body {
     font-family: "IBM Plex Sans", "Arial", sans-serif;
     font-weight: normal;
-    font-size: 1.75rem;
+    font-size: calc(1rem + 0.75vw);
     text-align: justify;
     scroll-snap-type: y mandatory;
     margin: 0 5vw;
@@ -39,9 +39,6 @@ h2 {
 p {
     font-size: 80%;
     padding-bottom: 1rem;
-}
-hr{
-    margin: 1rem 0;
 }
 
 header {
@@ -99,8 +96,9 @@ img:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 24px 40px rgba(0, 0, 0, .2);
 }
-.text{
-    margin: 0 15vw;
+
+.text {
+    margin: 0 15vw 20vh;
 }
 
 /* COLORS */
@@ -235,7 +233,8 @@ section {
         color: revert;
         position: revert;
     }
-    .text{
+
+    .text {
         margin: 0;
     }
 }
