@@ -14,79 +14,153 @@
     <meta name="ROBOTS" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Elijah Beaton, Designer</title>
+    <style>
+        @font-face {
+            font-family: "Inter";
+            src: url("/Users/elijah/Library/Fonts/Inter-Medium.otf") format("opentype");
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "IBM XGA";
+            src: url("./assets/IBM-XGA.otf") format("opentype");
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Apricot";
+            src: url("./assets/Web437_ApricotXenC.woff") format("woff");
+            font-style: normal;
+        }
+        ::selection {
+            background-color: gold;
+        }
+        body {
+            font-family: "Apricot", sans-serif;
+            background-color: WhiteSmoke;
+            color: #1D1D1D;
+            margin: 2rem;
+            
+        }
+        p, h1, h2, a, details, summary{
+            font-size: calc(1rem + 0.5vw);
+            font-weight: bold;
+            line-height: 150%;
+            margin: 0.5rem 0;
+        }
+        details p, details a{
+            font-size: 1rem;
+        }
+        a{
+            color: #1D1D1D;
+            text-underline-offset: 0.2rem;
+        }
+        a:hover{
+            opacity: 60%;
+        }
+
+        .inner{
+            margin: 1.5rem;
+        }
+        .inner a{
+            text-decoration: none;
+            padding: 1rem 0;
+        }
+        
+        #heart{
+            width: fit-content;
+        }
+        svg{
+            margin-top: 1rem;
+            fill: none;
+            stroke: #1D1D1D;
+        }
+        #heart:hover > svg{
+            fill: red;
+            stroke: red;
+        }
+        /*#heart:hover::after{
+            content: "from Bloomington, Indiana";
+            vertical-align: 0.25rem;
+            padding: 1rem;
+            font-size: 1rem;
+        }*/
+        
+        @media (prefers-color-scheme: dark) {
+            body{
+                color: whitesmoke;
+                background-color: #0C0C0C;
+            }
+            a{
+                color: whitesmoke;
+            }
+            svg{
+                fill: none;
+                stroke: whitesmoke;
+            }
+        }
+</style>
 </head>
 <body>
-     <header>
-        <h1 id="title">
-            <span class="name" style="animation-delay:0.5s;">Elijah Beaton is a&nbsp;</span>
-            <span>
-                <span class="stack" style="animation-delay:1.25s;">Historian,&nbsp;</span>
-                <span class="stack" style="animation-delay:1.75s;">Ph.D. Student,&nbsp;<span style="animation-delay:2.25s" class="hidden">and</span></span>
-                <span class="designer">Designer</span><span class="bounce-in-fwd">.</span>
-            </span>
-        </h1>
-    </header>
-    <section class="text">
-        <p>My design skills include Figma, Illustrator, and Photoshop, as well as HTML and CSS. I have also dabbled in some Swift UI.</p>
-        <p>I am a strong believer in designing with an ethos of negative space. Rather than try to exert control over every pixel in every possible edge case, I believe in design as a series of flexible guidelines. This requires approaching a design problem with a holistic view, but it offloads the calculations to the browser or the system. Embracing this flexibility enables a prioritization of the most important user-oriented details and interactions.</p>
-        <p><a href="mailto:elijah@beaton.page">elijah@beaton.page</a></p>
-    </section>
-    <section class="grid" id="conference">
-        <a href="https://twitter.com/iuconference" target="_blank">
-            <picture>
-                <img src="./assets/projects/conference-light.png" alt="A Poster mockup for the 2022 Paul Lucas Graduate Conference.">
-            </picture>
-        </a>
-        <div>
-            <h1>Paul Lucas Graduate Conference</h1>
-            <h2>Print and Social Media Campaign, 2022</h2>
-            <p>I believe that good design is that sense of harmony between the aesthetic and the goals of a project.</p>
-            <p>After a 3-year hiatus, the relaunch of the Paul Lucas Graduate Conference needed a design that would stand out visually from other grad conferences. This design was meant to be both cheap and efficient to print posters, as well as increase legibility in a social media feed.</p>
-        </div>
-    </section>
-    <section class="grid swap" id="elijah">
-        <a href="https://elijah.beaton.page" target="_blank">
-            <picture>
-                <source srcset="./assets/projects/elijah-dark.jpeg" media="(prefers-color-scheme: dark)">
-                <img src="./assets/projects/elijah-light.jpeg" alt="A screenshot of elijah.beaton.page">
-            </picture>
-        </a>
-        <div>
-            <h1>elijah.beaton.page</h1>
-            <h2>Personal Academic Website, 2021</h2>
-            <p>The aesthetic of a project should serve a purpose beyond looking nice. It should offer cues as to function, uses, and possibilities. It bridges the gap between the project and the user.</p>
-            <p>I wanted this design to offer both an overview of my work in a way that was flexible enough to encompass both my academic and non-academic interests.</p>
-        </div>
-    </section>
-    <section class="grid" id="juliana">
-        <a href="https://juliana.beaton.page" target="_blank">
-            <picture>
-                <source srcset="./assets/projects/juliana-dark.jpeg" media="(prefers-color-scheme: dark)">
-                <img src="./assets/projects/juliana-light.jpeg" alt="A screenshot of elijah.beaton.page">
-            </picture>
-        </a>
-        <div>
-            <h1>juliana.beaton.page</h1>
-            <h2>Personal Academic Website, 2021</h2>
-            <p>The design serves the goal rather than the opposite. The goal for this site was simply to publicize a Curriculum Vitae.</p>
-            <p>The design is an exploration of defaults. Drawing on both unstyled HTML and the standard academic paper design, the goal was to emphasize the text. The design itself was meant to polish and modernize those defaults styles, creating a fast, simple, and accessible site.</p>
-        </div>
-    </section><section class="grid swap" id="zine">
-        <a href="https://www.figma.com/proto/IIl9yeTT1YQcbMssk2VEEI/Kitchen-Zine?page-id=124%3A178&amp;node-id=124%3A320&amp;viewport=241%2C48%2C0.07&amp;scaling=scale-down&amp;starting-point-node-id=124%3A320" target="_blank">
-            <picture>
-                <source srcset="./assets/projects/zine.jpeg" media="(prefers-reduced-motion)">
-                <img src="./assets/projects/zine.gif" alt="A photo of my zine of Better Homes and Gardens on a light wood background.">
-            </picture>
-        </a>
-        <div>
-            <h1>Kitchens in <em>Better Homes and Gardens</em></h1>
-            <h2>Short Run Color Zine, 2020</h2>
-            <p>I was experimenting with alternate ways to present my research into art, architecture, and design, and this zine reignited a semi-dormant interest in design. Part of this experiment was scaling the gap between an idea in Figma, Illustrator, or Photoshop and a physical result. Actually printing and distributing the zine was an important step in designing for a larger audience than myself.</p>
-        </div>
-    </section>
-    <section>
+    <h1>Elijah Beaton</h1>
+    <!-- <h2>→ Designer, Historian, PhD Student</h2> -->
+<!--   this is the projects space    -->
+
+    <details>
+        <summary>Designer</summary>
+        <div class="inner">
+        <p>I specialize in print and digital design with an emphasis on posters and websites. In addition to my design work, I am also a graduate student at Indiana University, studying material culture, art, and the politcal construction of aesthetics in the late twentieth century.</p>
+        <br>
         <hr>
-        <p><a href="mailto:elijah@beaton.page">elijah@beaton.page</a></p>
-    </section>
+        <a href="https://www.figma.com/file/cF85CauuAVyIDcboC03Yce/Strike-Draft?node-id=71%3A11">Indiana Graduate Workers Coalition—United Electical<br>Printed Materials, Graphic Design, 2022</a>
+        <hr>
+        <a href="https://twitter.com/iuconference/status/1465672712697778182?s=20&t=DQbtucEZM1MZAX9h0DWSqg">Paul Lucas Graduate Conference<br>Print, Web, Social Media Campaign, 2022</a>
+        <hr>
+        <a href="https://juliana.beaton.page">juliana.beaton.page<br>Personal Academic Website, 2021</a>
+        <hr>
+        <a href="https://www.figma.com/file/o3MmUKNdEyRbLN8Aii0y0W/HGSA?node-id=367%3A2">Indiana University History Department<br>Miscellaneous Print Design, Apparel, 2021—Present</a>
+        <hr>
+        <a href="https://www.figma.com/file/LhIKUl7M8ZojJOJEBPMudu/icons?node-id=1645%3A2">Personal Icons for MacOS<br>2020—Present</a>
+        <hr>
+        </div>
+    </details>
+    
+    <details>
+        <summary>Historian</summary>
+        <div class="inner">
+        <hr>
+        <a href="https://history.indiana.edu/index.html">Indiana University, 2021—Present<br>PhD American History, Minor in Art History</a>
+        <hr>
+        <a href="https://www.history.msstate.edu">Mississippi State University, 2019—2021<br>MA American History, Material Culture Specialty</a>
+        <hr>
+        <a href="https://history.colostate.edu">Colorado State University, 2016—2018<br>BA History, Interdisciplinary Studies, Business</a>
+        <hr>
+        <a href="https://www.frontrange.edu">Front Range Community College, 2014—2016<br>AA History</a>
+        <hr>
+        </div>
+    </details>
+    
+    <details>
+        <summary>PhD Student</summary>
+        <div class="inner">
+        <hr>
+        <a href="https://jah.oah.org">Journal of American History<br>Editorial Assistant, 2021—Present</a>
+        <hr>
+        <a href="https://www.history.msstate.edu/directory/cdd351">Mississippi State University, Teaching Assistant<br>World History from 1500 with Christy Davenport, 2021</a>
+        <hr>
+        <a href="https://www.history.msstate.edu/directory/jcg245">Mississippi State University, Teaching Assistant<br>Modern U.S. History with Jim Giesen, 2019, 2020</a>
+        <hr>
+        <a href="https://www.genezubovich.com">Mississippi State University, Teaching Assistant<br>Modern U.S. History with Gene Zubovich, 2020</a>
+        <hr>
+        <a href="https://csurams.com">Colorado State University Athletic Department<br>History Tutor, 2016—2017</a>
+        <hr>
+        </div>
+    </details>
+    
+    <br>
+    <p><a href="https://elijah.beaton.page/assets/Elijah%20Beaton%20Curriculum%20Vitae.pdf">Download Curriculum Vitae ↓</a></p>
+    <p><a href="mailto:elijah@beaton.page">elijah@beaton.page</a></p>
+    <p id="heart">
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.99749 15.5047H8.49749V16.0047V16.5H8.49641V16.0047V15.5047H7.99641H7.49533V15.0093V14.5093H6.99533H6.50036V14.0079V13.5079H6.00036H5.49928V13.0065V12.5065H4.99928H4.4982V12.005V11.505H3.9982H3.49713V11.0036V10.5036H2.99713H2.49605V10.0022V9.50216H1.99605H1.49497V8.00539V7.50539H0.994973H0.5V4.49964H0.994973H1.49497V3.99964V2.50287H1.99605H2.49605V2.00287V1.50144H2.99713H3.49713V1.00144V0.5H6.49533V1.00144V1.50144H6.99533H7.49641V2.00287V2.50287H7.99641H8.99749H9.49749V2.00287V1.50144H9.99856H10.4986V1.00144V0.5H13.4968V1.00144V1.50144H13.9968H14.4978V2.00287V2.50287H14.9978H15.4989V3.99964V4.49964H15.9989H16.5V7.50539H15.9989H15.4989V8.00539V9.50216H14.9978H14.4978V10.0022V10.5036H13.9968H13.4968V11.0036V11.505H12.9957H12.4957V12.005V12.5065H12.0007H11.5007V13.0065V13.5079H10.9996H10.4996V14.0079V14.5093H9.99856H9.49856V15.0093V15.5047H8.99749Z""/>
+</p>
+
 </body>
 </html>
