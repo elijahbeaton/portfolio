@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="./main.css" rel="stylesheet" type="text/css">
+  <meta HTTP-EQUIV="REFRESH" content="0; url=https://elijah.beaton.page">
+</head>
+<!-- 
+<head>
     <link rel="shortcut icon" href="https://portfolio.beaton.page/assets/ico01.ico">
     <meta charset="utf-8">
     <meta property="og:type" content="website">
@@ -20,69 +23,80 @@
             src: url("/Users/elijah/Library/Fonts/Inter-Medium.otf") format("opentype");
             font-style: normal;
         }
-        @font-face {
-            font-family: "IBM XGA";
-            src: url("./assets/IBM-XGA.otf") format("opentype");
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Apricot";
-            src: url("./assets/Web437_ApricotXenC.woff") format("woff");
-            font-style: normal;
-        }
         ::selection {
             background-color: gold;
         }
+        html{
+            font-size: calc(0.5vw + 12px);
+        }
         body {
-            font-family: "Apricot", sans-serif;
+            font-family: "Inter", sans-serif;
             background-color: WhiteSmoke;
             color: #1D1D1D;
             margin: 2rem;
-            
         }
-        p, h1, h2, a, details, summary{
-            font-size: calc(1rem + 0.5vw);
-            font-weight: bold;
+
+        h1, h2, body > hr, summary, body > a p, #heart{
+            opacity: 0%;
+            animation: FadeIn 1s forwards;
+        }
+
+        p, h1, h2, summary, hr{
+            font-size: 1.5rem;
+            font-weight: normal;
             line-height: 150%;
-            margin: 0.5rem 0;
+            margin: 1rem 1.5rem;
         }
-        details p, details a{
-            font-size: 1rem;
+        summary{
+            margin: 1rem 0rem;
+        }
+        hr{
+            border: 0.1rem solid;
+        }
+        details p{
+            display: inline-flex;
+            width: calc(100% - 3rem);
+            justify-content: space-between;
+            margin: 0.25rem 1.5rem;
+        }
+        details a p::after {
+            opacity: 0;
+            content: "\2197";
+            align-self: center;
+            padding: 0.5rem 0.5rem 0 0;
+        }
+        details a p:hover::after {
+            opacity: 100%;
+        }
+        .intro{
+            display: revert;
+        }
+        .intro a{
+            color: grey;
+            text-decoration: underline;
+            text-decoration-thickness: 0.1rem;
+            text-underline-offset: 0.1rem;
         }
         a{
             color: #1D1D1D;
-            text-underline-offset: 0.2rem;
+            text-decoration: none;
         }
-        a:hover{
-            opacity: 60%;
+        a p:hover, summary:hover{
+            color: grey;
+            cursor: pointer;
         }
 
-        .inner{
-            margin: 1.5rem;
-        }
-        .inner a{
-            text-decoration: none;
-            padding: 1rem 0;
-        }
-        
+
         #heart{
             width: fit-content;
         }
-        svg{
-            margin-top: 1rem;
-            fill: none;
-            stroke: #1D1D1D;
+        #heart::after{
+            content:"\2661";
         }
-        #heart:hover > svg{
-            fill: red;
-            stroke: red;
+        #heart:hover::after{
+            content: "\2665";
+            color: red;
         }
-        /*#heart:hover::after{
-            content: "from Bloomington, Indiana";
-            vertical-align: 0.25rem;
-            padding: 1rem;
-            font-size: 1rem;
-        }*/
         
         @media (prefers-color-scheme: dark) {
             body{
@@ -92,75 +106,105 @@
             a{
                 color: whitesmoke;
             }
-            svg{
-                fill: none;
-                stroke: whitesmoke;
+        }
+        @media (hover: none){
+            :hover{
+                display: none;
             }
+        }
+        /* ANIMATIONS */
+        @-webkit-keyframes FadeIn {
+            0% { opacity:0; margin-top: 2rem; }
+            50% {  margin-top; }
+            100% { opacity:1; }
+        }
+        @keyframes FadeIn {
+            0% { opacity:0; margin-top: 2rem; }
+            50% {  margin-top; }
+            100% { opacity:1; }
         }
 </style>
 </head>
 <body>
     <h1>Elijah Beaton</h1>
-    <!-- <h2>→ Designer, Historian, PhD Student</h2> -->
-<!--   this is the projects space    -->
+    <hr>
+    <!~~   this is the projects space    ~~>
+    <details>
+        <summary>Academic</summary>
+        <div class="inner">
+        <br>
+        <p class="intro">I am a graduate student at Indiana University, studying material culture, art, and the political construction of aesthetics in the late twentieth century.</p>
+            <br>
+            <hr>
+
+                <a href="https://jah.oah.org"><p>Journal of American History<br>Editorial Assistant, 2021—Present</p></a>
+
+            <hr>
+                <a href="https://www.history.msstate.edu/directory/cdd351"><p>Mississippi State University, Teaching Assistant<br>World History from 1500 with Christy Davenport, 2021</p></a>
+
+            <hr>
+                <a href="https://www.history.msstate.edu/directory/jcg245"><p>Mississippi State University, Teaching Assistant<br>Modern U.S. History with Jim Giesen, 2019, 2020</p></a>
+
+            <hr>
+                <a href="https://www.genezubovich.com"><p>Mississippi State University, Teaching Assistant<br>Modern U.S. History with Gene Zubovich, 2020</p></a>
+
+            <hr>
+                <a href="https://csurams.com"><p>Colorado State University Athletic Department<br>History Tutor, 2016—2017</p></a>
+
+        </div>
+
+
+    </details>
+    <hr>
 
     <details>
         <summary>Designer</summary>
         <div class="inner">
-        <p>I specialize in print and digital design with an emphasis on posters and websites. In addition to my design work, I am also a graduate student at Indiana University, studying material culture, art, and the politcal construction of aesthetics in the late twentieth century.</p>
-        <br>
-        <hr>
-        <a href="https://www.figma.com/file/cF85CauuAVyIDcboC03Yce/Strike-Draft?node-id=71%3A11">Indiana Graduate Workers Coalition—United Electical<br>Printed Materials, Graphic Design, 2022</a>
-        <hr>
-        <a href="https://twitter.com/iuconference/status/1465672712697778182?s=20&t=DQbtucEZM1MZAX9h0DWSqg">Paul Lucas Graduate Conference<br>Print, Web, Social Media Campaign, 2022</a>
-        <hr>
-        <a href="https://juliana.beaton.page">juliana.beaton.page<br>Personal Academic Website, 2021</a>
-        <hr>
-        <a href="https://www.figma.com/file/o3MmUKNdEyRbLN8Aii0y0W/HGSA?node-id=367%3A2">Indiana University History Department<br>Miscellaneous Print Design, Apparel, 2021—Present</a>
-        <hr>
-        <a href="https://www.figma.com/file/LhIKUl7M8ZojJOJEBPMudu/icons?node-id=1645%3A2">Personal Icons for MacOS<br>2020—Present</a>
-        <hr>
+            <br>
+            <p class="intro">I specialize in print and digital design with an emphasis on posters and websites. <a href="./portfolio.html">more</a></p>
+            <br>
+            <hr>
+                <a href="https://www.figma.com/file/cF85CauuAVyIDcboC03Yce/Strike-Draft?node-id=71%3A11"><p>Indiana Graduate Workers Coalition—United Electrical<br>Printed Materials, Graphic Design, 2022</p></a>
+
+            <hr>
+                <a href="https://twitter.com/iuconference/status/1465672712697778182?s=20&t=DQbtucEZM1MZAX9h0DWSqg"><p>Paul Lucas Graduate Conference<br>Print, Web, Social Media Campaign, 2022</p></a>
+
+            <hr>
+                <a href="https://juliana.beaton.page"><p>juliana.beaton.page<br>Personal Academic Website, 2021</p></a>
+
+            <hr>
+                <a href="https://www.figma.com/file/o3MmUKNdEyRbLN8Aii0y0W/HGSA?node-id=367%3A2"><p>Indiana University History Department<br>Miscellaneous Print Design, Apparel, 2021—Present</p></a>
+
+            <hr>
+                <a href="https://www.figma.com/file/LhIKUl7M8ZojJOJEBPMudu/icons?node-id=1645%3A2"><p>Personal Icons for MacOS<br>2020—Present</p></a>
         </div>
     </details>
-    
-    <details>
-        <summary>Historian</summary>
-        <div class="inner">
-        <hr>
-        <a href="https://history.indiana.edu/index.html">Indiana University, 2021—Present<br>PhD American History, Minor in Art History</a>
-        <hr>
-        <a href="https://www.history.msstate.edu">Mississippi State University, 2019—2021<br>MA American History, Material Culture Specialty</a>
-        <hr>
-        <a href="https://history.colostate.edu">Colorado State University, 2016—2018<br>BA History, Interdisciplinary Studies, Business</a>
-        <hr>
-        <a href="https://www.frontrange.edu">Front Range Community College, 2014—2016<br>AA History</a>
-        <hr>
-        </div>
-    </details>
+    <hr>
     
     <details>
         <summary>PhD Student</summary>
         <div class="inner">
-        <hr>
-        <a href="https://jah.oah.org">Journal of American History<br>Editorial Assistant, 2021—Present</a>
-        <hr>
-        <a href="https://www.history.msstate.edu/directory/cdd351">Mississippi State University, Teaching Assistant<br>World History from 1500 with Christy Davenport, 2021</a>
-        <hr>
-        <a href="https://www.history.msstate.edu/directory/jcg245">Mississippi State University, Teaching Assistant<br>Modern U.S. History with Jim Giesen, 2019, 2020</a>
-        <hr>
-        <a href="https://www.genezubovich.com">Mississippi State University, Teaching Assistant<br>Modern U.S. History with Gene Zubovich, 2020</a>
-        <hr>
-        <a href="https://csurams.com">Colorado State University Athletic Department<br>History Tutor, 2016—2017</a>
-        <hr>
+            <br>
+            
+                <a href="https://history.indiana.edu/index.html"><p>Indiana University, 2021—Present<br>PhD American History, Minor in Art History</p></a>
+
+            <hr>
+                <a href="https://www.history.msstate.edu"><p>Mississippi State University, 2019—2021<br>MA American History, Material Culture Specialty</p></a>
+
+            <hr>
+                <a href="https://history.colostate.edu"><p>Colorado State University, 2016—2018<br>BA History, Interdisciplinary Studies, Business</p></a>
+
+            <hr>
+                <a href="https://www.frontrange.edu"><p>Front Range Community College, 2014—2016<br>AA History</p></a>
         </div>
+        
     </details>
-    
-    <br>
-    <p><a href="https://elijah.beaton.page/assets/Elijah%20Beaton%20Curriculum%20Vitae.pdf">Download Curriculum Vitae ↓</a></p>
-    <p><a href="mailto:elijah@beaton.page">elijah@beaton.page</a></p>
-    <p id="heart">
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.99749 15.5047H8.49749V16.0047V16.5H8.49641V16.0047V15.5047H7.99641H7.49533V15.0093V14.5093H6.99533H6.50036V14.0079V13.5079H6.00036H5.49928V13.0065V12.5065H4.99928H4.4982V12.005V11.505H3.9982H3.49713V11.0036V10.5036H2.99713H2.49605V10.0022V9.50216H1.99605H1.49497V8.00539V7.50539H0.994973H0.5V4.49964H0.994973H1.49497V3.99964V2.50287H1.99605H2.49605V2.00287V1.50144H2.99713H3.49713V1.00144V0.5H6.49533V1.00144V1.50144H6.99533H7.49641V2.00287V2.50287H7.99641H8.99749H9.49749V2.00287V1.50144H9.99856H10.4986V1.00144V0.5H13.4968V1.00144V1.50144H13.9968H14.4978V2.00287V2.50287H14.9978H15.4989V3.99964V4.49964H15.9989H16.5V7.50539H15.9989H15.4989V8.00539V9.50216H14.9978H14.4978V10.0022V10.5036H13.9968H13.4968V11.0036V11.505H12.9957H12.4957V12.005V12.5065H12.0007H11.5007V13.0065V13.5079H10.9996H10.4996V14.0079V14.5093H9.99856H9.49856V15.0093V15.5047H8.99749Z""/>
-</p>
+    <hr>
+    <a href="https://elijah.beaton.page/assets/Elijah%20Beaton%20Curriculum%20Vitae.pdf"><p>Download Curriculum Vitae ↓</p></a>
+    <hr>
+    <a href="mailto:elijah@beaton.page"><p>elijah@beaton.page</p></a>
+    <p id="heart"></p>
 
 </body>
 </html>
+ -->
